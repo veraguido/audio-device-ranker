@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.audio-device-ranker"
+          path="/org/gnome/shell/extensions/audio-device-ranker/">
+
+    <key name="output-devices" type="s">
+      <default>"[]"</default>
+      <summary>Known output devices</summary>
+      <description>
+        JSON array of remembered output (playback) devices, ordered by rank.
+        Index 0 is the highest priority. Each entry is {"key": "...", "label": "...", "hidden": bool};
+        hidden devices are removed from the GNOME Shell Quick Settings menu.
+      </description>
+    </key>
+
+    <key name="input-devices" type="s">
+      <default>"[]"</default>
+      <summary>Known input devices</summary>
+      <description>
+        JSON array of remembered input (recording) devices, ordered by rank.
+        Index 0 is the highest priority. Each entry is {"key": "...", "label": "...", "hidden": bool};
+        hidden devices are removed from the GNOME Shell Quick Settings menu.
+      </description>
+    </key>
+
+    <key name="auto-switch" type="b">
+      <default>true</default>
+      <summary>Automatically switch on connect</summary>
+      <description>
+        When enabled, connecting a ranked device that outranks the currently
+        active one will automatically make it the default device.
+      </description>
+    </key>
+
+    <key name="cycle-output-shortcut" type="as">
+      <default>[]</default>
+      <summary>Cycle output device</summary>
+      <description>
+        Keyboard shortcut that switches to the next connected, visible output
+        device in rank order.
+      </description>
+    </key>
+
+    <key name="cycle-input-shortcut" type="as">
+      <default>[]</default>
+      <summary>Cycle input device</summary>
+      <description>
+        Keyboard shortcut that switches to the next connected, visible input
+        device in rank order.
+      </description>
+    </key>
+
+  </schema>
+</schemalist>

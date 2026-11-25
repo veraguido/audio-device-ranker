@@ -1,0 +1,10 @@
+{
+  "uuid": "audio-device-ranker@guido.vera",
+  "name": "Audio Device Ranker",
+  "description": "Recognize and remember your audio input and output devices, rank them by drag-and-drop, and automatically switch to your highest-ranked device when it (re)connects. Rankings persist across disconnects, reboots and reconnects.",
+  "shell-version": ["45", "46", "47", "48", "49", "50", "51"],
+  "settings-schema": "org.gnome.shell.extensions.audio-device-ranker",
+  "gettext-domain": "audio-device-ranker",
+  "url": "https://github.com/guido/audio-device-ranker",
+  "version": 1
+}
